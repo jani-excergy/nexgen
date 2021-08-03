@@ -23,7 +23,7 @@ uploaded_file = st.file_uploader("Choose a XLSX file", type="xlsx")
 
 if uploaded_file:
     df = pd.read_excel(uploaded_file)
-    df=df.drop(['Unnamed: 0'],axis=1)
+    #df=df.drop(['Unnamed: 0'],axis=1)
     df=df.sort_values(by=['Created Date'])
     
     df['Created Date']=pd.to_datetime(df['Created Date'])
